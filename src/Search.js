@@ -1,0 +1,111 @@
+import React, { useState } from 'react';
+import axios from 'axios';
+import Searchlist from './Searchlist';
+import Searchlisthumidity from './Searchlisthumidity';
+import Searchlistpicture from './Searchlistpicture';
+import axiosInstance from './axios';
+import Logout from './Logout';
+import { Link } from 'react-router-dom';
+
+const Search = () => {
+    const [dataid, setDataid] = useState('');
+    const [datatype, setDatatype] = useState('');
+    const [nodenumber, setNodenumber] = useState('');
+    const [daterange, setDaterange] = useState('');
+    const [responseData, setResponseData] = useState(null);
+    const [error, setError] = useState(null);
+  
+    const handleSubmit = async (e) => {
+      e.preventDefault();
+      console.log(localStorage.getItem('access_token'))
+  
+      try {
+    
+        const response = await axiosInstance.get(
+          '/',
+          {
+            params: {
+                dataid: dataid,
+                datatype: datatype,
+                nodenumber: nodenumber,
+                daterange: daterange,
+          },
+          
+            headers: {
+              'Content-Type': 'application/json',
+              Authorization: 'Bearer ' + localStorage.getItem('access_token'),
+
+            },
+          }
+        );
+  
+        if (response.status === 200) {
+          console.log(response.data)
+          setResponseData(response.data); // Save the response data in state
+          setError(null); // Reset the error state
+        }
+  
+      } catch (err) {
+        if (err.response && err.response.data) {
+          setError(err.response.data); // Set the error state to the response data
+        } else {
+          setError(err.message);
+        }
+        setResponseData(null); // Reset the response data state
+      }
+    };
+  
+    const handleInputChange = () => {
+      setError(null); // Reset the error state
+    };
+  
+    return (
+      <div>
+        
+        <div className='search-box'>
+          <form onSubmit={handleSubmit}>
+            <input
+              type='text'
+              id='dataid'
+              placeholder='dataid'
+              onChange={(e) => { setDataid(e.target.value); handleInputChange(); }}
+              value={dataid}
+            />
+            <select id="datatype" onChange={(e) => { setDatatype(e.target.value); handleInputChange(); }} value={datatype} required>
+            <option value="">Select a datatype</option>
+            <option value="temperature">Temperature</option>
+            <option value="humidity">Humidity</option>
+            <option value="picture">Picture</option>
+            </select>
+            <input
+              type='text'
+              id='nodenumber'
+              placeholder='nodenumber'
+              onChange={(e) => { setNodenumber(e.target.value); handleInputChange(); }}
+              value={nodenumber}
+            />
+            <input
+              type='text'
+              placeholder='daterange'
+              id='daterange'
+              onChange={(e) => { setDaterange(e.target.value); handleInputChange(); }}
+              value={daterange}
+            />
+            <button type='submit' class="search">Search</button>
+          </form>
+        </div>
+  
+        {error && <p>Error: {error.detail}</p>}
+  
+        {responseData && datatype==='temperature' && <Searchlist results={responseData}/>}
+        {responseData && datatype==='humidity' && <Searchlisthumidity results={responseData}/>}
+        {responseData && datatype==='picture' && <Searchlistpicture results={responseData}/>}
+        <Link to="/Logout">Logout</Link>
+
+      </div>
+  
+    );
+  };
+  
+  export default Search;
+  
