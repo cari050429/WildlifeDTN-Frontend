@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 export default function Logout() {
 	const navigate=useNavigate();
 	useEffect(() => {
-		const response = axiosInstance.post('logout/blacklist/', {
+		axiosInstance.post('logout/blacklist/', {
 			refresh_token: localStorage.getItem('refresh_token')
             }
 		);

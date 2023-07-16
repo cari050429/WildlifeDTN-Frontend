@@ -7,7 +7,7 @@ export default function Searchlist({ results }) {
       {results.map(result => (
         <div className='data-preview' key={result.pk}>
             <Link to={`/Search/picture/${result.pk}`}>
-            <img src={result.picture} alt='Data Picture' />
+            <img src={result.picture} alt='Data' />
           </Link>
         </div>
       ))}
