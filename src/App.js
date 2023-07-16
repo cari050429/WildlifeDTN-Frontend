@@ -1,7 +1,6 @@
 // AuthProvider.js
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
-import Private from './Private';
+import { BrowserRouter as Route, Routes, Navigate } from 'react-router-dom';
 import Login from './Login';
 import Search from './Search';
 import Searchdetail from './Searchdetail';

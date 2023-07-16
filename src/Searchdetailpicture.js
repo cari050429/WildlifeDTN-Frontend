@@ -36,7 +36,7 @@ const Searchdetailpicture = () => {
       {error && <p>Error: {error.detail}</p>}
       {responseData &&
         <div>
-          <img src={responseData.picture} alt='Data Picture' />
+          <img src={responseData.picture} alt='Data ' />
           <p>Data ID: {responseData.dataid}</p>
           <p>Data Type: {responseData.file_type}</p>
           <p>Node Number: {responseData.node_origination}</p>

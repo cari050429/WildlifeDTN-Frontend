@@ -3,7 +3,6 @@ import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import Delete from './Delete';
 import TimeConverter from './Secondtotime';
-import { Link } from 'react-router-dom';
 
 
 const Searchdetailhumidity = () => {
