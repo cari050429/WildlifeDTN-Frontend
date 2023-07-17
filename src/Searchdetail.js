@@ -12,7 +12,7 @@ const Search = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`http://127.0.0.1:8000/api/temperature/${pk}`);
+        const response = await axios.get(`/temperature/${pk}`);
 
         if (response.status === 200) {
           setResponseData(response.data); // Save the response data in state
