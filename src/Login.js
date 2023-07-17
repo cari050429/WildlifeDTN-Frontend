@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import Button from './button';
-import Search from './Search';
-import axios from 'axios';
 import { useNavigate } from "react-router-dom";
 import axiosInstance from './axios.js';
 

@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
-import axios from 'axios';
 import Searchlist from './Searchlist';
 import Searchlisthumidity from './Searchlisthumidity';
 import Searchlistpicture from './Searchlistpicture';
 import axiosInstance from './axios';
-import Logout from './Logout';
 import { Link } from 'react-router-dom';
 
 const Search = () => {
