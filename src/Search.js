@@ -9,7 +9,8 @@ const Search = () => {
     const [dataid, setDataid] = useState('');
     const [datatype, setDatatype] = useState('');
     const [nodenumber, setNodenumber] = useState('');
-    const [daterange, setDaterange] = useState('');
+    const [begin_seconds, setBegin_seconds] = useState('');
+    const [end_seconds, setEnd_seconds]=useState('');
     const [responseData, setResponseData] = useState(null);
     const [error, setError] = useState(null);
   
@@ -26,7 +27,8 @@ const Search = () => {
                 dataid: dataid,
                 datatype: datatype,
                 nodenumber: nodenumber,
-                daterange: daterange,
+                begin_seconds: begin_seconds,
+                end_seconds: end_seconds,
           },
           
             headers: {
@@ -84,11 +86,20 @@ const Search = () => {
             />
             <input
               type='text'
-              placeholder='daterange'
-              id='daterange'
-              onChange={(e) => { setDaterange(e.target.value); handleInputChange(); }}
-              value={daterange}
+              placeholder='beginning date range'
+              id='begdaterange'
+              onChange={(e) => { setBegin_seconds(e.target.value); handleInputChange(); }}
+              value={begin_seconds}
             />
+            <input
+              type='text'
+              placeholder='ending date range'
+              id='enddaterange'
+              onChange={(e) => { setEnd_seconds(e.target.value); handleInputChange(); }}
+              value={end_seconds}
+            />
+          
+
             <button type='submit' class="search">Search</button>
           </form>
         </div>

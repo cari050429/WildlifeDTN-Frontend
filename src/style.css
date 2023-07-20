@@ -87,7 +87,17 @@
   font-size:15px;
 }
 
-#daterange{
+#begdaterange{
+  position: absolute;
+  width: 300px;
+  height:40px;
+  bottom: 40px;
+  right: 400px;
+  background-color: white;
+  font-size:15px;
+}
+
+#enddaterange{
   position: absolute;
   width: 300px;
   height:40px;
@@ -124,6 +134,7 @@ html {
 
 .logout{
   width: 300px;
+  height:40px;
   background-color: blue;
   padding: 20px;
   border-radius: 8px;
