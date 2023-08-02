@@ -4,7 +4,6 @@ import Searchlisthumidity from './Searchlisthumidity';
 import Searchlistpicture from './Searchlistpicture';
 import axiosInstance from './axios';
 import { Link } from 'react-router-dom';
-import Download from './Download';
 
 const Search = () => {
     const [dataid, setDataid] = useState('');
@@ -111,10 +110,11 @@ const Search = () => {
         {responseData && datatype==='humidity' && <Searchlisthumidity results={responseData}/>}
         {responseData && datatype==='picture' && <Searchlistpicture results={responseData}/>}
         <Link to="/Logout">Logout</Link>
-        <Download dataid={dataid} datatype={datatype} nodenumber={nodenumber} begin_seconds={begin_seconds} end_seconds={end_seconds} />
 
       </div>
   
     );
   };
-export default Search;
+  
+  export default Search;
+  

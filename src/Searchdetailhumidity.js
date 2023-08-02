@@ -3,6 +3,7 @@ import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import Delete from './Delete';
 import TimeConverter from './Secondtotime';
+import axiosInstance from './axios';
 
 
 const Searchdetailhumidity = () => {
@@ -13,7 +14,7 @@ const Searchdetailhumidity = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`/humidity/${pk}`);
+        const response = await axiosInstance.get(`/humidity/${pk}`);
         
         if (response.status === 200) {
           setResponseData(response.data); // Save the response data in state

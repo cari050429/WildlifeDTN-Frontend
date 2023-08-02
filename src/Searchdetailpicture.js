@@ -3,6 +3,7 @@ import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import Delete from './Delete';
 import TimeConverter from './Secondtotime';
+import axiosInstance from './axios';
 
 const Searchdetailpicture = () => {
   const { pk } = useParams();
@@ -12,7 +13,7 @@ const Searchdetailpicture = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`/picture/${pk}`);
+        const response = await axiosInstance.get(`/picture/${pk}`);
         
         if (response.status === 200) {
           setResponseData(response.data); // Save the response data in state
@@ -40,6 +41,8 @@ const Searchdetailpicture = () => {
           <p>Data ID: {responseData.dataid}</p>
           <p>Data Type: {responseData.file_type}</p>
           <p>Node Number: {responseData.node_origination}</p>
+          <p>Date Created: {responseData.date_created}</p>
+          <p>Date Inputted: {responseData.date_inputted}</p>
           <p><TimeConverter totalSeconds={responseData.time_difference}/></p>
           <Delete pk={pk} type='picture'/>
         </div>
@@ -49,3 +52,4 @@ const Searchdetailpicture = () => {
 };
   
 export default Searchdetailpicture;
+
