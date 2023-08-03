@@ -6,6 +6,7 @@ export default function Navbar() {
     <nav className="navbar">
       <div className="navbar-container">
       <Link to="/Search">Home</Link>
+      <Link to="/Sensor">Sensor</Link>
       <Link to="/Logout">Logout</Link>
       </div>
     </nav>
