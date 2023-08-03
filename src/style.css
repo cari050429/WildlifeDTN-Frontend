@@ -1,140 +1,5 @@
 .login-box {
-    width: 300px;
-    background-color: blue;
-    padding: 20px;
-    border-radius: 8px;
-    color: white;
-    height:300px;
-    border: 1px solid black;
-    margin: auto;
-    margin-top:200px;
-    background-color: #3431D9;
-    justify-content: center;
-    align-items: center;
-
-  }
-  
-  .login-box input {
-    width: 250px;
-    height:40px;
-    margin-top: 40px;
-    margin-left: 25px;
-    background-color: white;
-    font-size:15px;
-  }
-  
-  .Button {
-    padding: 10px;
-    background-color: white;
-    color: blue;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    width: 120px;
-    height: 50px;
-    margin-left:90px;
-    font-size: 15px;
-    background-color:#7687E0;
-    margin-top:50px;
-    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
-
-  }
-  .Button:active {
-    top: 2px;
-    left: 1px;
-    box-shadow: none;
-  }
-
-  
-.search-box{
-  position:relative;
-  box-sizing: border-box;
-  margin-top:50px;
-  max-width: 100%;
-  height: 200px;
-  background-color:#3431D9;
-  border: 1px solid black;
-
-}
-
-#dataid{
-  position: absolute;
   width: 300px;
-  height:40px;
-  top: 40px;
-  left: 100px;
-  background-color: white;
-  font-size:15px;
-}
-
-#datatype {
-  position: absolute;
-  width: 300px;
-  height: 40px;
-  bottom: 40px;
-  left: 100px;
-  background-color: white;
-  font-size: 15px;
-}
-
-#nodenumber{
-  position: absolute;
-  width: 300px;
-  height:40px;
-  top: 40px;
-  right: 400px;
-  background-color: white;
-  font-size:15px;
-}
-
-#begdaterange{
-  position: absolute;
-  width: 300px;
-  height:40px;
-  bottom: 40px;
-  right: 400px;
-  background-color: white;
-  font-size:15px;
-}
-
-#enddaterange{
-  position: absolute;
-  width: 300px;
-  height:40px;
-  bottom: 40px;
-  right: 400px;
-  background-color: white;
-  font-size:15px;
-}
-
-.search{
-  position: absolute;
-  width:150px;
-  height:80px;
-  background-color: white;
-  font-size:15px;
-  right:120px;
-  top:60px;
-  font-size:30px;
-  background-color:#7687E0
-
-}
-
-.search-list{
-  width: 200px;
-  height: 200px;
-  background-color: #f1f1f1;
-  border: 1px solid #ccc;
-  padding: 20px;
-}
-
-html {
-  overflow-x: hidden;
-}
-
-.logout{
-  width: 300px;
-  height:40px;
   background-color: blue;
   padding: 20px;
   border-radius: 8px;
@@ -146,4 +11,150 @@ html {
   background-color: #3431D9;
   justify-content: center;
   align-items: center;
+
+}
+
+.login-box input {
+  width: 250px;
+  height:40px;
+  margin-top: 40px;
+  margin-left: 25px;
+  background-color: white;
+  font-size:15px;
+}
+
+.Button {
+  padding: 10px;
+  background-color: white;
+  color: blue;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 120px;
+  height: 50px;
+  margin-left:90px;
+  font-size: 15px;
+  background-color:#7687E0;
+  margin-top:50px;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
+
+}
+.Button:active {
+  top: 2px;
+  left: 1px;
+  box-shadow: none;
+}
+
+
+.search-box{
+position:relative;
+box-sizing: border-box;
+margin-top:0px;
+max-width: 100%;
+height: 200px;
+background-color:#3431D9;
+border: 1px solid black;
+
+}
+
+#dataid {
+position: absolute;
+width: 300px;
+height: 40px;
+top: 40px;
+left: 100px;
+background-color: white;
+font-size: 15px;
+}
+
+#datatype {
+position: absolute;
+width: 300px;
+height: 40px;
+top: 100px; /* Adjust the top position to create space between elements */
+left: 100px;
+background-color: white;
+font-size: 15px;
+}
+
+#nodenumber {
+position: absolute;
+width: 300px;
+height: 40px;
+top: 160px; /* Adjust the top position to create space between elements */
+right: 400px;
+background-color: white;
+font-size: 15px;
+}
+
+#begdaterange {
+position: absolute;
+width: 300px;
+height: 40px;
+bottom: 160px; /* Adjust the bottom position to create space between elements */
+right: 400px;
+background-color: white;
+font-size: 15px;
+}
+
+#enddaterange {
+position: absolute;
+width: 300px;
+height: 40px;
+bottom: 100px; /* Adjust the bottom position to create space between elements */
+right: 400px;
+background-color: white;
+font-size: 15px;
+}
+
+
+.search{
+position: absolute;
+width:150px;
+height:80px;
+background-color: white;
+font-size:15px;
+right:120px;
+top:60px;
+font-size:30px;
+background-color:#7687E0
+
+}
+
+.search-list{
+width: 200px;
+height: 200px;
+background-color: #f1f1f1;
+border: 1px solid #ccc;
+padding: 20px;
+}
+
+html {
+overflow-x: hidden;
+}
+
+
+.navbar {
+background-color:#7687E0;
+color: #fff;
+padding: 10px;
+}
+
+.navbar-container {
+display: flex;
+justify-content: flex-end;
+}
+
+.navbar a {
+color: #fff;
+text-decoration: none;
+padding: 8px 16px;
+}
+
+.navbar a:hover {
+background-color: #555;
+}
+
+.logout {
+cursor: pointer;
 }
