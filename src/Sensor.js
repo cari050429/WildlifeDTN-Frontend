@@ -44,7 +44,8 @@ const Sensor = () => {
         sensorData.map((sensor) => (
           <div key={sensor.pk}>
             <h2>Sensor Name: {sensor.sensor_name}</h2>
-            <h2>Sensor Node: {sensor.node_id}</h2>
+            <h2>Sensor Node: {sensor.node}</h2>
+            <hr/>
           </div>
         ))}
     </div>
