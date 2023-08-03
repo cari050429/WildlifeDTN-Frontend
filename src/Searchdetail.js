@@ -39,6 +39,8 @@ const Search = () => {
           <p>Data Temperature: {responseData.temperature}</p>
           <p>Data ID: {responseData.dataid}</p>
           <p>Data Type: {responseData.file_type}</p>
+          <p>Date Created: {responseData.date_created}</p>
+          <p>Date Inputted: {responseData.date_inputted}</p>
           <p>Node Number: {responseData.node_origination}</p>
           <p><TimeConverter totalSeconds={responseData.time_difference}/></p>
           <Delete pk={pk} type='temperature'/>
