@@ -3,8 +3,7 @@ import Searchlist from './Searchlist';
 import Searchlisthumidity from './Searchlisthumidity';
 import Searchlistpicture from './Searchlistpicture';
 import axiosInstance from './axios';
-import { Link } from 'react-router-dom';
-
+import Navbar from './Navbar';
 const Search = () => {
     const [dataid, setDataid] = useState('');
     const [datatype, setDatatype] = useState('');
@@ -61,7 +60,7 @@ const Search = () => {
   
     return (
       <div>
-        
+        <Navbar/>
         <div className='search-box'>
           <form onSubmit={handleSubmit}>
             <input
@@ -105,11 +104,9 @@ const Search = () => {
         </div>
   
         {error && <p>Error: {error.detail}</p>}
-  
         {responseData && datatype==='temperature' && <Searchlist results={responseData}/>}
         {responseData && datatype==='humidity' && <Searchlisthumidity results={responseData}/>}
         {responseData && datatype==='picture' && <Searchlistpicture results={responseData}/>}
-        <Link to="/Logout">Logout</Link>
 
       </div>
   

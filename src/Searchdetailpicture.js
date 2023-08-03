@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import Delete from './Delete';
 import TimeConverter from './Secondtotime';
 import axiosInstance from './axios';
+import Navbar from './Navbar';
 
 const Searchdetailpicture = () => {
   const { pk } = useParams();
@@ -34,14 +35,15 @@ const Searchdetailpicture = () => {
   return (
     <div>
       {error && <p>Error: {error.detail}</p>}
+      <Navbar/>
       {responseData &&
         <div>
           <img src={responseData.picture} alt='Data ' />
           <p>Data ID: {responseData.dataid}</p>
           <p>Data Type: {responseData.file_type}</p>
-          <p>Node Number: {responseData.node_origination}</p>
           <p>Date Created: {responseData.date_created}</p>
           <p>Date Inputted: {responseData.date_inputted}</p>
+          <p>Node Number: {responseData.node_origination}</p>
           <p><TimeConverter totalSeconds={responseData.time_difference}/></p>
           <Delete pk={pk} type='picture'/>
         </div>
@@ -51,4 +53,3 @@ const Searchdetailpicture = () => {
 };
   
 export default Searchdetailpicture;
-

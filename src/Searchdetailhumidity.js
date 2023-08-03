@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import Delete from './Delete';
 import TimeConverter from './Secondtotime';
 import axiosInstance from './axios';
+import Navbar from './Navbar';
 
 
 const Searchdetailhumidity = () => {
@@ -35,6 +36,7 @@ const Searchdetailhumidity = () => {
   return (
     <div>
       {error && <p>Error: {error.detail}</p>}
+      <Navbar/>
       {responseData &&
         <div>
           <p>Data Humidity: {responseData.humidity}</p>

@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import Delete from './Delete';
 import TimeConverter from './Secondtotime';
 import axiosInstance from './axios';
+import Navbar from './Navbar';
 
 const Search = () => {
   const { pk } = useParams();
@@ -34,6 +35,7 @@ const Search = () => {
   return (
     <div>
       {error && <p>Error: {error.detail}</p>}
+      <Navbar/>
       {responseData &&
         <div>
           <p>Data Temperature: {responseData.temperature}</p>
