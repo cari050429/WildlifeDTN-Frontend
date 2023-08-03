@@ -78,33 +78,33 @@ font-size: 15px;
 }
 
 #nodenumber {
-position: absolute;
-width: 300px;
-height: 40px;
-top: 100px; /* Adjust the top position to create space between elements */
-right: 400px;
-background-color: white;
-font-size: 15px;
+  position: absolute;
+  width: 300px;
+  height: 40px;
+  top: 100px;
+  right: 400px;
+  background-color: white;
+  font-size: 15px;
 }
 
 #begdaterange {
-position: absolute;
-width: 300px;
-height: 40px;
-bottom: 100px; /* Adjust the bottom position to create space between elements */
-right: 400px;
-background-color: white;
-font-size: 15px;
+  position: absolute;
+  width: 300px;
+  height: 40px;
+  top: calc(100px + 60px); /* 60px space between nodenumber and begindaterange */
+  right: 400px;
+  background-color: white;
+  font-size: 15px;
 }
 
 #enddaterange {
-position: absolute;
-width: 300px;
-height: 40px;
-bottom: 100px; /* Adjust the bottom position to create space between elements */
-right: 400px;
-background-color: white;
-font-size: 15px;
+  position: absolute;
+  width: 300px;
+  height: 40px;
+  top: calc(100px + 120px); /* 120px space between nodenumber and enddaterange */
+  right: 400px;
+  background-color: white;
+  font-size: 15px;
 }
 
 
