@@ -91,7 +91,7 @@ font-size: 15px;
   position: absolute;
   width: 300px;
   height: 40px;
-  top: calc(100px + 60px); /* 60px space between nodenumber and begindaterange */
+  top: 40px
   right: 400px;
   background-color: white;
   font-size: 15px;
@@ -101,7 +101,7 @@ font-size: 15px;
   position: absolute;
   width: 300px;
   height: 40px;
-  top: calc(100px + 120px); /* 120px space between nodenumber and enddaterange */
+  top: 40px
   right: 400px;
   background-color: white;
   font-size: 15px;
