@@ -15,7 +15,7 @@ export default function Deleteall({ pk, type }) {
         },
       });
       console.log('Data deleted successfully');
-      window.location.reload();
+      navigate('/Search');
     } catch (error) {
       console.error(error);
       
