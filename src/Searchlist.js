@@ -5,7 +5,6 @@ import Deleteall from './Deleteall';
 export default function Searchlist({ results }) {
   return (
     <div className='search-list'>
-      <Deleteall type='temperature'/>
       {results.map(result => (
         <div className='data-preview-small' key={result.pk}>
             <Link to={`/Search/temperature/${result.pk}`}>
