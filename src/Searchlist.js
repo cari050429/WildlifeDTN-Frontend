@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Deleteall from './Deleteall';
 
 export default function Searchlist({ results }) {
   return (
