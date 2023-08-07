@@ -5,16 +5,15 @@ import Download from './Download';
 export default function Searchlist({ results }) {
   return (
     <div className='search-list'>
-    <Download/>
+      <Download data={results} />
       {results.map(result => (
         <div className='data-preview-small' key={result.pk}>
-            <Link to={`/Search/temperature/${result.pk}`}>
+          <Link to={`/Search/temperature/${result.pk}`}>
             <p>Data Temperature: {result.temperature}</p>
           </Link>
-          <hr/>
+          <hr />
         </div>
       ))}
     </div>
   );
 }
-

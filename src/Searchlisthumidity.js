@@ -5,7 +5,7 @@ import Download
 export default function Searchlisthumidity({ results }) {
   return (
     <div className='search-list'>
-    <Download/>
+    <Download data={results} />
       {results.map(result => (
         <div className='data-preview-small' key={result.pk}>
             <Link to={`/Search/humidity/${result.pk}`}>

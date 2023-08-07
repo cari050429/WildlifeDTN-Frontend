@@ -5,7 +5,7 @@ import Download from './Download';
 export default function Searchlist({ results }) {
   return (
     <div className='search-list'>
-    <Download/>
+    <Download data={results} />
       {results.map(result => (
         <div className='data-preview' key={result.pk}>
             <Link to={`/Search/picture/${result.pk}`}>
