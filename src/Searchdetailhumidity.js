@@ -38,8 +38,8 @@ const Searchdetailhumidity = () => {
       {error && <p>Error: {error.detail}</p>}
       <Navbar/>
       {responseData &&
-        <div>
-          <p>Data Humidity: {responseData.humidity}</p>
+        <div className='Detail-small'>
+          <p className='humid'>Data Humidity: {responseData.humidity}</p>
           <p>Data ID: {responseData.dataid}</p>
           <p>Data Type: {responseData.file_type}</p>
           <p>Node Number: {responseData.node_origination}</p>
